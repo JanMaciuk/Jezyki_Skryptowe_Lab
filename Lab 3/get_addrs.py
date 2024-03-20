@@ -1,9 +1,6 @@
 
 def get_addrs(logs: dict) -> list:
-    return list(logs.keys())
-
-def get_addrs_no_duplicates(logs: dict) -> list:
-    return list(set(logs.keys()))
+    return list(set(logs.keys()))   # set in order to avoid duplicates
 
 if __name__ == "__main__":
     from read_log import read_log
@@ -11,4 +8,3 @@ if __name__ == "__main__":
     logs = read_log()
     result = log_to_dict(logs)
     print(get_addrs(result))
-    print(get_addrs_no_duplicates(result))

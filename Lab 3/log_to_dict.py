@@ -1,4 +1,5 @@
 from entry_to_dict import entry_to_dict
+
 def log_to_dict(logs: list) -> dict:
     result_dict: dict = {}
     for entry in logs:
